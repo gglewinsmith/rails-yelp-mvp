@@ -1,0 +1,10 @@
+<h1>Hello World</h1>
+<% @restaurants.each do |restaurant| %>
+<h2>Restaurant Name = <%= link_to restaurant.name , restaurant_path(restaurant)%></h2>
+<h3>Food type = <%= restaurant.category %></h3>
+<h3>Adress = <%= restaurant.address %></h3>
+<h3>Phone Number = <%= restaurant.phone_number %></h3>
+  <%= link_to "delete this resto", restaurant_path(restaurant), method: "delete" %>
+<% end %>
+
+  <p><%=  link_to "new Resto?", new_restaurant_path %></p>

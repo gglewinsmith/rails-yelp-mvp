@@ -1,3 +1,30 @@
+puts 'Cleaning database...'
+Restaurant.destroy_all
+
+puts 'Creating restaurants...'
+restaurants_attributes = [
+  {
+    name:         'Dishoom',
+    address:      '7 Boundary St, London E2 7JE',
+    category:      'french',
+    phone_number:   'dorjgndofjgi'
+  },
+  {
+    name:         'Pizza East',
+    address:      '56A Shoreditch High St, London E1 6PQ',
+    category:     'chinese',
+    phone_number:   'dorjgndasdaofjgi'
+  },
+  {
+    name:         'Chicken East',
+    address:      '56A Shoreditch High St, London E1 6PQ',
+    category:     'italian',
+    phone_number:   'dorjgndoddffjgi'
+  }
+]
+Restaurant.create!(restaurants_attributes)
+puts 'Finished!'
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
